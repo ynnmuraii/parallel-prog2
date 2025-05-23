@@ -1,0 +1,87 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "parallel-prog2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "matrix1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-matrix1-Debug-ef376b14bc3e8c5c2217.json",
+					"name" : "matrix1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "matrix2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-matrix2-Debug-b991ca63345733449060.json",
+					"name" : "matrix2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_matrix1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_matrix1-Debug-a257d27721b3484cebd0.json",
+					"name" : "run_matrix1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_matrix2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_matrix2-Debug-83188474dd5a67bfcdb7.json",
+					"name" : "run_matrix2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "A:/Study/Programming/parallel-prog2/out/build/x64-Debug",
+		"source" : "A:/Study/Programming/parallel-prog2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
