@@ -43,7 +43,7 @@ Matrix multiply(const Matrix& a, const Matrix& b) {
 
 int main() {
     vector<int> sizes = {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000};
-    ofstream res("../../../lab1/results_lab1.txt", ios::app);
+    ofstream res("../../../lab1/results_lab1.txt");
     for (int sz : sizes) {
         string fileA = "../../../matrix/matrixA_" + to_string(sz) + ".txt";
         string fileB = "../../../matrix/matrixB_" + to_string(sz) + ".txt";

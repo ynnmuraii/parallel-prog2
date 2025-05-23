@@ -25,3 +25,4 @@ add_custom_target(run_matrix2
     COMMAND matrix2
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
 )
+

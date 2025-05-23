@@ -1,10 +1,30 @@
-Matrix size: 100x100 * 100x100 | Execution time: 3.8054 ms
-Matrix size: 200x200 * 200x200 | Execution time: 30.2788 ms
-Matrix size: 300x300 * 300x300 | Execution time: 92.2357 ms
-Matrix size: 400x400 * 400x400 | Execution time: 148.81 ms
-Matrix size: 500x500 * 500x500 | Execution time: 290.175 ms
-Matrix size: 600x600 * 600x600 | Execution time: 527.602 ms
-Matrix size: 700x700 * 700x700 | Execution time: 812.932 ms
-Matrix size: 800x800 * 800x800 | Execution time: 1189.42 ms
-Matrix size: 900x900 * 900x900 | Execution time: 1980.81 ms
-Matrix size: 1000x1000 * 1000x1000 | Execution time: 2491.26 ms
+Threads: 2 | Matrix size: 100x100 * 100x100 | Execution time: 5.384 ms
+Threads: 2 | Matrix size: 200x200 * 200x200 | Execution time: 36.4755 ms
+Threads: 2 | Matrix size: 300x300 * 300x300 | Execution time: 130.03 ms
+Threads: 2 | Matrix size: 400x400 * 400x400 | Execution time: 286.125 ms
+Threads: 2 | Matrix size: 500x500 * 500x500 | Execution time: 544.282 ms
+Threads: 2 | Matrix size: 600x600 * 600x600 | Execution time: 960.715 ms
+Threads: 2 | Matrix size: 700x700 * 700x700 | Execution time: 1508.67 ms
+Threads: 2 | Matrix size: 800x800 * 800x800 | Execution time: 2234.15 ms
+Threads: 2 | Matrix size: 900x900 * 900x900 | Execution time: 3508.85 ms
+Threads: 2 | Matrix size: 1000x1000 * 1000x1000 | Execution time: 4502.88 ms
+Threads: 4 | Matrix size: 100x100 * 100x100 | Execution time: 3.9609 ms
+Threads: 4 | Matrix size: 200x200 * 200x200 | Execution time: 17.9041 ms
+Threads: 4 | Matrix size: 300x300 * 300x300 | Execution time: 59.7803 ms
+Threads: 4 | Matrix size: 400x400 * 400x400 | Execution time: 160.179 ms
+Threads: 4 | Matrix size: 500x500 * 500x500 | Execution time: 292.971 ms
+Threads: 4 | Matrix size: 600x600 * 600x600 | Execution time: 537.692 ms
+Threads: 4 | Matrix size: 700x700 * 700x700 | Execution time: 874.783 ms
+Threads: 4 | Matrix size: 800x800 * 800x800 | Execution time: 1251.5 ms
+Threads: 4 | Matrix size: 900x900 * 900x900 | Execution time: 1966.81 ms
+Threads: 4 | Matrix size: 1000x1000 * 1000x1000 | Execution time: 2520.88 ms
+Threads: 8 | Matrix size: 100x100 * 100x100 | Execution time: 4.2431 ms
+Threads: 8 | Matrix size: 200x200 * 200x200 | Execution time: 17.1518 ms
+Threads: 8 | Matrix size: 300x300 * 300x300 | Execution time: 49.7599 ms
+Threads: 8 | Matrix size: 400x400 * 400x400 | Execution time: 105.763 ms
+Threads: 8 | Matrix size: 500x500 * 500x500 | Execution time: 225.699 ms
+Threads: 8 | Matrix size: 600x600 * 600x600 | Execution time: 385.229 ms
+Threads: 8 | Matrix size: 700x700 * 700x700 | Execution time: 534.709 ms
+Threads: 8 | Matrix size: 800x800 * 800x800 | Execution time: 944.074 ms
+Threads: 8 | Matrix size: 900x900 * 900x900 | Execution time: 1253.86 ms
+Threads: 8 | Matrix size: 1000x1000 * 1000x1000 | Execution time: 1595.93 ms

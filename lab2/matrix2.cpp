@@ -48,30 +48,33 @@ matrix multiply(const matrix& a, const matrix& b) {
 
 int main() {
     vector<int> sizes = { 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000 };
-    ofstream res("../../../lab2/results_lab2.txt", ios::app);
-    for (int sz : sizes) {
-        string fileA = "../../../matrix/matrixA_" + to_string(sz) + ".txt";
-        string fileB = "../../../matrix/matrixB_" + to_string(sz) + ".txt";
-        string fileC = "../../../matrix/matrixC_" + to_string(sz) + ".txt";
+    ofstream res("../../../lab2/results_lab2.txt");
+    vector<int> thread_counts = {2, 4, 8};
+    for (int threads : thread_counts) {
+        for (int sz : sizes) {
+            string fileA = "../../../matrix/matrixA_" + to_string(sz) + ".txt";
+            string fileB = "../../../matrix/matrixB_" + to_string(sz) + ".txt";
+            string fileC = "../../../matrix/matrixC_" + to_string(sz) + ".txt";
 
-        omp_set_num_threads(4);
+            omp_set_num_threads(threads);
 
-        matrix a = read_matrix(fileA);
-        matrix b = read_matrix(fileB);
+            matrix a = read_matrix(fileA);
+            matrix b = read_matrix(fileB);
 
-        auto start = chrono::high_resolution_clock::now();
-        matrix c = multiply(a, b);
-        auto end = chrono::high_resolution_clock::now();
-        chrono::duration<double, std::milli> diff = end - start;
+            auto start = chrono::high_resolution_clock::now();
+            matrix c = multiply(a, b);
+            auto end = chrono::high_resolution_clock::now();
+            chrono::duration<double, std::milli> diff = end - start;
 
-        write_matrix(fileC, c);
+            write_matrix(fileC, c);
 
-        res << "Matrix size: " << a.size() << "x" << a[0].size() << " * " << b.size() << "x" << b[0].size()
-            << " | Execution time: " << diff.count() << " ms" << endl;
+            res << "Threads: " << threads << " | Matrix size: " << a.size() << "x" << a[0].size() << " * " << b.size() << "x" << b[0].size()
+                << " | Execution time: " << diff.count() << " ms" << endl;
 
-        cout << std::fixed << std::setprecision(3);
-        cout << "Execution time: " << diff.count() << " ms" << endl;
-        cout << "matrix size: " << a.size() << "x" << a[0].size() << " * " << b.size() << "x" << b[0].size() << endl;
+            cout << std::fixed << std::setprecision(3);
+            cout << "Threads: " << threads << " | Execution time: " << diff.count() << " ms" << endl;
+            cout << "matrix size: " << a.size() << "x" << a[0].size() << " * " << b.size() << "x" << b[0].size() << endl;
+        }
     }
     return 0;
 }
