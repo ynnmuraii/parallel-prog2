@@ -3,6 +3,7 @@
 #include <fstream>
 #include <chrono>
 #include <iomanip>
+#include <string>
 #include <omp.h> // openmp
 
 using namespace std;
@@ -46,25 +47,31 @@ matrix multiply(const matrix& a, const matrix& b) {
 }
 
 int main() {
-   string filea = "matrixA.txt";
-   string fileb = "matrixB.txt";
-   string filec = "matrixC.txt";
+    vector<int> sizes = { 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000 };
+    ofstream res("../../../lab2/results_lab2.txt", ios::app);
+    for (int sz : sizes) {
+        string fileA = "../../../matrix/matrixA_" + to_string(sz) + ".txt";
+        string fileB = "../../../matrix/matrixB_" + to_string(sz) + ".txt";
+        string fileC = "../../../matrix/matrixC_" + to_string(sz) + ".txt";
 
-   omp_set_num_threads(4);
+        omp_set_num_threads(4);
 
-   matrix a = read_matrix(filea);
-   matrix b = read_matrix(fileb);
+        matrix a = read_matrix(fileA);
+        matrix b = read_matrix(fileB);
 
-   auto start = chrono::high_resolution_clock::now();
-   matrix c = multiply(a, b);
-   auto end = chrono::high_resolution_clock::now();
-   chrono::duration<double> diff = end - start;
+        auto start = chrono::high_resolution_clock::now();
+        matrix c = multiply(a, b);
+        auto end = chrono::high_resolution_clock::now();
+        chrono::duration<double, std::milli> diff = end - start;
 
-   write_matrix(filec, c);
+        write_matrix(fileC, c);
 
-   cout << std::fixed << std::setprecision(6);
-   cout << "execution time: " << diff.count() << " seconds" << endl;
-   cout << "problem size: " << a.size() << "x" << a[0].size() << " * " << b.size() << "x" << b[0].size() << endl;
+        res << "Matrix size: " << a.size() << "x" << a[0].size() << " * " << b.size() << "x" << b[0].size()
+            << " | Execution time: " << diff.count() << " ms" << endl;
 
-   return 0;
+        cout << std::fixed << std::setprecision(3);
+        cout << "Execution time: " << diff.count() << " ms" << endl;
+        cout << "matrix size: " << a.size() << "x" << a[0].size() << " * " << b.size() << "x" << b[0].size() << endl;
+    }
+    return 0;
 }

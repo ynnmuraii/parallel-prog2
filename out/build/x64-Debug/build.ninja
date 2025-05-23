@@ -153,7 +153,6 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
 build CMakeFiles\run_matrix1 | ${cmake_ninja_workdir}CMakeFiles\run_matrix1: CUSTOM_COMMAND || matrix1.exe
   COMMAND = cmd.exe /C "cd /D A:\Study\Programming\parallel-prog2\out\build\x64-Debug && A:\Study\Programming\parallel-prog2\out\build\x64-Debug\matrix1.exe"
-  DESC = Running matrix1 (Lab 1)
 
 
 #############################################
@@ -161,7 +160,6 @@ build CMakeFiles\run_matrix1 | ${cmake_ninja_workdir}CMakeFiles\run_matrix1: CUS
 
 build CMakeFiles\run_matrix2 | ${cmake_ninja_workdir}CMakeFiles\run_matrix2: CUSTOM_COMMAND || matrix2.exe
   COMMAND = cmd.exe /C "cd /D A:\Study\Programming\parallel-prog2\out\build\x64-Debug && A:\Study\Programming\parallel-prog2\out\build\x64-Debug\matrix2.exe"
-  DESC = Running matrix2 (Lab 2)
 
 # =============================================================================
 # Target aliases.

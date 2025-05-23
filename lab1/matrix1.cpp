@@ -3,6 +3,7 @@
 #include <fstream>
 #include <chrono>
 #include <iomanip>
+#include <string>
 
 using namespace std;
 
@@ -41,23 +42,29 @@ Matrix multiply(const Matrix& a, const Matrix& b) {
 }
 
 int main() {
-    string fileA = "matrixA.txt";
-    string fileB = "matrixB.txt";
-    string fileC = "matrixC.txt";
+    vector<int> sizes = {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000};
+    ofstream res("../../../lab1/results_lab1.txt", ios::app);
+    for (int sz : sizes) {
+        string fileA = "../../../matrix/matrixA_" + to_string(sz) + ".txt";
+        string fileB = "../../../matrix/matrixB_" + to_string(sz) + ".txt";
+        string fileC = "../../../matrix/matrixC_" + to_string(sz) + ".txt";
 
-    Matrix a = read_matrix(fileA);
-    Matrix b = read_matrix(fileB);
+        Matrix a = read_matrix(fileA);
+        Matrix b = read_matrix(fileB);
 
-    auto start = chrono::high_resolution_clock::now();
-    Matrix c = multiply(a, b);
-    auto end = chrono::high_resolution_clock::now();
-    chrono::duration<double> diff = end - start;
+        auto start = chrono::high_resolution_clock::now();
+        Matrix c = multiply(a, b);
+        auto end = chrono::high_resolution_clock::now();
+        chrono::duration<double, std::milli> diff = end - start;
 
-    write_matrix(fileC, c);
+        write_matrix(fileC, c);
 
-    cout << std::fixed << std::setprecision(6);
-    cout << "Execution time: " << diff.count() << " seconds" << endl;
-    cout << "Problem size: " << a.size() << "x" << a[0].size() << " * " << b.size() << "x" << b[0].size() << endl;
+        res << "Matrix size: " << a.size() << "x" << a[0].size() << " * " << b.size() << "x" << b[0].size()
+            << " | Execution time: " << diff.count() << " ms" << endl;
 
+        cout << std::fixed << std::setprecision(3);
+        cout << "Execution time: " << diff.count() << " ms" << endl;
+        cout << "matrix size: " << a.size() << "x" << a[0].size() << " * " << b.size() << "x" << b[0].size() << endl;
+    }
     return 0;
 }
