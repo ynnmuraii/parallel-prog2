@@ -1,11 +1,8 @@
 # ninja log v5
-20	65	7697198659961658	CMakeFiles/matrix3.dir/lab3/matrix3.cpp.obj	17bf29bfd38edca2
-12	474	7697198769631468	CMakeFiles/matrix2.dir/lab2/matrix2.cpp.obj	1ec860bcf3ef74af
+12	770	7697222666512842	CMakeFiles/matrix3.dir/lab3/matrix3.cpp.obj	17bf29bfd38edca2
+8	464	7697200368072204	CMakeFiles/matrix2.dir/lab2/matrix2.cpp.obj	1ec860bcf3ef74af
 13	750	7697187824122813	CMakeFiles/matrix1.dir/lab1/matrix1.cpp.obj	eebf1f240144482f
 12	270	7697188256268804	matrix1.exe	28c92199c9ae31fe
-730	987	7697195859038493	matrix2.exe	74d7443ca0b03d0
-11	140	7697199056467277	build.ninja	fe7d33032caaeddd
-20	160	7697199056467277	build.ninja	fe7d33032caaeddd
-17	336	7697199059549311	matrix2.exe	74d7443ca0b03d0
-8	464	7697200368072204	CMakeFiles/matrix2.dir/lab2/matrix2.cpp.obj	1ec860bcf3ef74af
 465	675	7697200369550201	matrix2.exe	74d7443ca0b03d0
+20	160	7697227248025522	build.ninja	fe7d33032caaeddd
+771	1003	7697222668397162	matrix3.exe	472ddbbb41de008c
