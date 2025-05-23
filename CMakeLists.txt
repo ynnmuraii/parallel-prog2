@@ -26,3 +26,11 @@ add_custom_target(run_matrix2
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
 )
 
+add_executable(matrix3 lab3/matrix3.cpp)
+set_target_properties(matrix3 PROPERTIES FOLDER "lab3")
+find_package(MPI REQUIRED)
+target_link_libraries(matrix3 MPI::MPI_CXX)
+add_custom_target(run_matrix3
+    COMMAND matrix3
+    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+)

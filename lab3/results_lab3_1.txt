@@ -1,0 +1,10 @@
+Cores: 1 | Matrix size: 100x100 * 100x100 | Execution time: 7.954 ms
+Cores: 1 | Matrix size: 200x200 * 200x200 | Execution time: 72.4178 ms
+Cores: 1 | Matrix size: 300x300 * 300x300 | Execution time: 216.102 ms
+Cores: 1 | Matrix size: 400x400 * 400x400 | Execution time: 479.184 ms
+Cores: 1 | Matrix size: 500x500 * 500x500 | Execution time: 953.976 ms
+Cores: 1 | Matrix size: 600x600 * 600x600 | Execution time: 1646.87 ms
+Cores: 1 | Matrix size: 700x700 * 700x700 | Execution time: 2579.62 ms
+Cores: 1 | Matrix size: 800x800 * 800x800 | Execution time: 3842.55 ms
+Cores: 1 | Matrix size: 900x900 * 900x900 | Execution time: 5464.22 ms
+Cores: 1 | Matrix size: 1000x1000 * 1000x1000 | Execution time: 7504.87 ms
